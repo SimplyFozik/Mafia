@@ -1,0 +1,4 @@
+﻿  MafiaClient.cpp
+C:\Users\itstep\Desktop\Mafia\MafiaClient\MafiaClient\MafiaClient.cpp(13,28): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\itstep\Desktop\Mafia\MafiaClient\MafiaClient\MafiaClient.cpp(17): warning C4717: funcSendMessage: рекурсия на всех путях выполнения, функция вызовет переполнение стека
+  MafiaClient.vcxproj -> C:\Users\itstep\Desktop\Mafia\MafiaClient\x64\Debug\MafiaClient.exe

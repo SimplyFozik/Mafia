@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\top\\Desktop\\Mafia\\MafiaClient\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{2DA279EE-46D3-409F-A086-16E16F94A8CA}|MafiaClient\\MafiaClient.vcxproj|C:\\Users\\top\\Desktop\\Mafia\\MafiaClient\\MafiaClient\\MafiaClient.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}",
+      "RelativeMoniker": "D:0:0:{2DA279EE-46D3-409F-A086-16E16F94A8CA}|MafiaClient\\MafiaClient.vcxproj|solutionrelative:MafiaClient\\MafiaClient.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "MafiaClient.cpp",
+              "DocumentMoniker": "C:\\Users\\top\\Desktop\\Mafia\\MafiaClient\\MafiaClient\\MafiaClient.cpp",
+              "RelativeDocumentMoniker": "MafiaClient\\MafiaClient.cpp",
+              "ToolTip": "C:\\Users\\top\\Desktop\\Mafia\\MafiaClient\\MafiaClient\\MafiaClient.cpp*",
+              "RelativeToolTip": "MafiaClient\\MafiaClient.cpp*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
+              "WhenOpened": "2025-01-16T13:35:31.424Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
