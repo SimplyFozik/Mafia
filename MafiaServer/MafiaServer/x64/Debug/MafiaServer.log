@@ -1,4 +1,0 @@
-﻿  MafiaServer.cpp
-C:\Users\top\Desktop\Mafia\MafiaServer\MafiaServer\MafiaServer.cpp(13,15): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
-C:\Users\top\Desktop\Mafia\MafiaServer\MafiaServer\MafiaServer.cpp(17,1): warning C4717: funcSendMessage: рекурсия на всех путях выполнения, функция вызовет переполнение стека
-  MafiaServer.vcxproj -> C:\Users\top\Desktop\Mafia\MafiaServer\x64\Debug\MafiaServer.exe

@@ -1,0 +1,3 @@
+﻿  ClientSource.cpp
+D:\Рабочий стол\Source\ClientSource\ClientSource.cpp(49,29): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+  ClientSource.vcxproj -> D:\Рабочий стол\Source\ClientSource\x64\Debug\ClientSource.exe
