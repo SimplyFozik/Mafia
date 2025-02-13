@@ -30,7 +30,7 @@ int main(int argc, char* argv[]) {
 
 	SOCKADDR_IN addr;
 	int sizeofaddr = sizeof(addr);
-	addr.sin_addr.s_addr = inet_addr("192.168.1.67");
+	addr.sin_addr.s_addr = inet_addr("192.168.0.71");
 	addr.sin_port = htons(1111);
 	addr.sin_family = AF_INET;
 
@@ -47,9 +47,12 @@ int main(int argc, char* argv[]) {
 	while (true) {
 		std::getline(std::cin, msg1);
 		int msg_size = msg1.size();
-		send(Connection, (char*)&msg_size, sizeof(int), NULL);
-		send(Connection, msg1.c_str(), msg_size, NULL);
-		Sleep(10);
+		if (msg_size > 0) // avoid errors with empty string
+		{
+			send(Connection, (char*)&msg_size, sizeof(int), NULL);
+			send(Connection, msg1.c_str(), msg_size, NULL);
+			Sleep(10);
+		}
 	}
 
 	system("pause");

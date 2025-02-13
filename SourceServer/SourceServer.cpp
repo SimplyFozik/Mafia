@@ -13,6 +13,65 @@ using namespace std;
 const int Max_players = 10;
 SOCKET Connections[10];
 int Counter = 0;
+bool debug = false;
+
+void fireClient(char* msg, int msg_size, int index) // Server->Client
+{
+    SOCKET Connection = Connections[index];
+    send(Connection, (char*)&msg_size, sizeof(int), NULL);
+    send(Connection, msg, msg_size, NULL);
+    delete[] msg;
+}
+
+void fireAllClients(char* msg,int msg_size, int index) // Server->Clients
+{
+    for (int i = 0; i < Counter; i++) // send msg to everyone
+    {
+        if (i == index)
+        {
+            continue;
+        }
+        send(Connections[i], (char*)&msg_size, sizeof(int), NULL);
+        send(Connections[i], msg, msg_size, NULL);
+    }
+    delete[] msg;
+}
+
+void getCommand(char* msg, int msg_size, int index)
+{
+    if (strcmp(msg, "?debug") == 0)
+    {
+        debug = true;
+    }
+
+    if (msg[0] == '?' && msg_size > 1 && debug == true) // ex. of command ?kill index
+    {
+        if (strcmp(msg, "?kill") == 0)
+        {
+            // killing person 
+        }
+        else if (strcmp(msg, "?heal") == 0)
+        {
+            // healing someone
+        }
+        else if (strcmp(msg, "?help") == 0)
+        {
+            // list of commands and help... idk
+        }
+        else if (strcmp(msg, "?debug") == 0)
+        {
+            cout << "[Client]" << '[' << index << ']' << " Activated debug mode" << endl;
+        }
+        else
+        {
+            cout << "[Client]" << '[' << index << ']' << " Wrote undefined command." << endl;
+        }
+    }
+    else
+    {
+        fireAllClients(msg, msg_size, index);
+    }
+}
 
 void recvMsg(int index)
 {
@@ -36,14 +95,8 @@ void recvMsg(int index)
             cout << "Error #2\n" << "No Bytes Recieved, Client disconnected\n";
             ExitThread(2);
         }
-        for (int i = 0; i < Counter; i++) {
-            if (i == index) {
-                continue;
-            }
-            send(Connections[i], (char*)&msg_size, sizeof(int), NULL);
-            send(Connections[i], msg, msg_size, NULL);
-        }
-        delete[] msg;
+
+        getCommand(msg, msg_size, index);
     }
 }
 

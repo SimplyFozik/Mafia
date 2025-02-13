@@ -1,1 +1,2 @@
 D:\Рабочий стол\Source\ClientSource\x64\Debug\ClientSource.exe
+D:\Рабочий стол\Source\SourceClient\x64\Debug\ClientSource.exe

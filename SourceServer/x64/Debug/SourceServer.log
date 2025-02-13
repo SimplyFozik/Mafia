@@ -1,4 +1,4 @@
 ﻿  SourceServer.cpp
-D:\Рабочий стол\Source\SourceServer\SourceServer.cpp(82,38): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
-D:\Рабочий стол\Source\SourceServer\SourceServer.cpp(90,82): warning C4312: приведение типов: преобразование из "int" в "LPVOID" большего размера
+D:\Рабочий стол\Source\SourceServer\SourceServer.cpp(135,38): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+D:\Рабочий стол\Source\SourceServer\SourceServer.cpp(143,82): warning C4312: приведение типов: преобразование из "int" в "LPVOID" большего размера
   SourceServer.vcxproj -> D:\Рабочий стол\Source\SourceServer\x64\Debug\SourceServer.exe
