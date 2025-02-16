@@ -1,0 +1,4 @@
+﻿  SourceServer.cpp
+C:\Users\Fozik\Desktop\Mafia\SourceServer\SourceServer.cpp(152,26): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\Fozik\Desktop\Mafia\SourceServer\SourceServer.cpp(160,71): warning C4312: приведение типов: преобразование из "int" в "LPVOID" большего размера
+  SourceServer.vcxproj -> C:\Users\Fozik\Desktop\Mafia\SourceServer\x64\Debug\SourceServer.exe

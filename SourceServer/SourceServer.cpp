@@ -112,9 +112,26 @@ int main()
         exit(1);
     }
 
+    // Get the local hostname 
+    char hostname[1024];
+    struct hostent* host_entry;
+    char* ip;
+    gethostname(hostname, sizeof(hostname));
+    host_entry = gethostbyname(hostname);
+
+    if (host_entry == nullptr) {
+        std::cerr << "[Server] gethostbyname failed." << std::endl;
+        WSACleanup();
+        return 1;
+    }
+
+    // Convert the first IP address to a readable format 
+    ip = inet_ntoa(*(struct in_addr*)*host_entry->h_addr_list);
+    std::cout << "[Server] Server IP Address: " << ip << std::endl;
+
     SOCKADDR_IN addr;
     int sizeofaddr = sizeof(addr);
-    addr.sin_addr.s_addr = inet_addr("192.168.0.71"); // 192.168.1.67
+    addr.sin_addr.s_addr = inet_addr(ip); // auto local ip as server
     addr.sin_port = htons(1111);
     addr.sin_family = AF_INET;
 
